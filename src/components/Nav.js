@@ -11,13 +11,13 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <a href="#">About Us</a>
+          <a href="#">About Me</a>
         </li>
         <li>
-          <a href="#">Our Work</a>
+          <a href="#">My Work</a>
         </li>
         <li>
-          <a href="#">Contact Us</a>
+          <a href="#">Contact Me</a>
         </li>
       </ul>
     </StyledNav>
