@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import AboutPage from "./pages/AboutPage";
 import WorkPage from "./pages/WorkPage";
+import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import GlobalStyle from "./components/GlobalStyle";
 
@@ -13,7 +14,8 @@ function App() {
       <Nav />
       <Switch>
         <Route path="/" component={AboutPage} exact />
-        <Route path="/work" component={WorkPage} />
+        <Route path="/work" component={WorkPage} exact />
+        <Route path="/work/:id" component={ProjectsPage} />
         <Route path="/contact" component={ContactPage} />
         {/* <Route component={NotFound} /> */}
       </Switch>
