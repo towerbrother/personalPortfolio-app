@@ -1,4 +1,5 @@
 import React from "react";
+import Wave from "./Wave";
 import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
@@ -56,6 +57,7 @@ const ServicesSection = () => {
       <StyledImage>
         <img src={home2} alt="a camera" />
       </StyledImage>
+      <Wave />
     </StyledServices>
   );
 };
@@ -63,13 +65,13 @@ const ServicesSection = () => {
 export default ServicesSection;
 
 const StyledServices = styled(StyledLayout)`
+  z-index: 2;
   h2 {
     padding-bottom: 5rem;
   }
-
   p {
     width: 70%;
-    padding: 2rem 0rem 4rem 0rem;
+    padding: 2rem 0rem;
   }
 `;
 
@@ -79,7 +81,7 @@ const Cards = styled.div`
 `;
 
 const Card = styled.div`
-  flex-basis: 20rem;
+  flex-basis: 15rem;
   .icon {
     display: flex;
     align-items: center;
