@@ -34,3 +34,8 @@ export const lineAnimation = {
   hidden: { width: "0%" },
   show: { width: "100%", transition: { duration: 1 } },
 };
+
+export const scrollRevealAnimation = {
+  hidden: { opacity: 0, scale: 1.2, transition: { duration: 0.5 } },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};

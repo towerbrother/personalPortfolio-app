@@ -1,6 +1,7 @@
 import React from "react";
 import Wave from "./Wave";
 import home1 from "../img/home1.png";
+import styled from "styled-components";
 import {
   StyledLayout,
   StyledDescription,
@@ -12,7 +13,7 @@ import { fadeAnimation, photoAnimation } from "../animations";
 
 const AboutSection = () => {
   return (
-    <StyledLayout>
+    <StyledAbout>
       <StyledDescription>
         <motion.div className="title" variants={fadeAnimation}>
           <StyledHide>
@@ -38,8 +39,10 @@ const AboutSection = () => {
         />
       </StyledImage>
       <Wave />
-    </StyledLayout>
+    </StyledAbout>
   );
 };
 
 export default AboutSection;
+
+const StyledAbout = styled(StyledLayout)``;
