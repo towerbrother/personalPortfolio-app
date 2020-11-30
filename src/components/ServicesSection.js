@@ -7,7 +7,7 @@ import teamwork from "../img/teamwork.svg";
 import home2 from "../img/home2.png";
 import styled from "styled-components";
 import { StyledLayout, StyledDescription, StyledImage } from "./../styles";
-import { scrollRevealAnimation } from "./../animations";
+import { fadeAnimation } from "./../animations";
 import { useScroll } from "./useScroll";
 
 const ServicesSection = () => {
@@ -15,7 +15,7 @@ const ServicesSection = () => {
   return (
     <StyledServices
       ref={element}
-      variants={scrollRevealAnimation}
+      variants={fadeAnimation}
       initial="hidden"
       animate={controls}
     >

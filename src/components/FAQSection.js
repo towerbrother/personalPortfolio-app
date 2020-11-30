@@ -3,7 +3,7 @@ import Toggle from "./Toggle";
 import styled from "styled-components";
 import { StyledLayout } from "./../styles";
 import { AnimateSharedLayout } from "framer-motion";
-import { scrollRevealAnimation } from "./../animations";
+import { fadeAnimation } from "./../animations";
 import { useScroll } from "./useScroll";
 
 const FAQSection = () => {
@@ -11,7 +11,7 @@ const FAQSection = () => {
   return (
     <FAQ
       ref={element}
-      variants={scrollRevealAnimation}
+      variants={fadeAnimation}
       initial="hidden"
       animate={controls}
     >

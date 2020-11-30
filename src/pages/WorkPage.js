@@ -12,11 +12,14 @@ import {
   photoAnimation,
   lineAnimation,
 } from "../animations";
+import { useScroll } from "./../components/useScroll";
 
 // create a separate file with an array of projects
 // map through the array and display the Project component
 
 const WorkPage = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     <StyledWork
       variants={pageAnimation}
@@ -34,29 +37,31 @@ const WorkPage = () => {
           </StyledHide>
         </Link>
       </StyledProject>
-      <StyledProject>
-        <motion.h2 variants={fadeAnimation}>The Racer</motion.h2>
+      <StyledProject
+        ref={element}
+        variants={fadeAnimation}
+        initial="hidden"
+        animate={controls}
+      >
+        <h2>The Racer</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-racer">
           <StyledHide>
-            <motion.img
-              variants={photoAnimation}
-              src={theracer}
-              alt="theracer"
-            />
+            <img src={theracer} alt="theracer" />
           </StyledHide>
         </Link>
       </StyledProject>
-      <StyledProject>
-        <motion.h2 variants={fadeAnimation}>Good Times</motion.h2>
+      <StyledProject
+        ref={element2}
+        variants={fadeAnimation}
+        initial="hidden"
+        animate={controls2}
+      >
+        <h2>Good Times</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/good-times">
           <StyledHide>
-            <motion.img
-              variants={photoAnimation}
-              src={goodtimes}
-              alt="goodtimes"
-            />
+            <img src={goodtimes} alt="goodtimes" />
           </StyledHide>
         </Link>
       </StyledProject>
@@ -75,7 +80,7 @@ const StyledWork = styled(motion.div)`
   }
 `;
 
-const StyledProject = styled.div`
+const StyledProject = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.3rem;
