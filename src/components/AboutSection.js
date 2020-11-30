@@ -1,4 +1,5 @@
 import React from "react";
+import Wave from "./Wave";
 import home1 from "../img/home1.png";
 import {
   StyledLayout,
@@ -15,15 +16,12 @@ const AboutSection = () => {
       <StyledDescription>
         <motion.div className="title">
           <StyledHide>
-            <motion.h2 variants={swipeUpAnimation}>We work to make</motion.h2>
+            <motion.h2 variants={swipeUpAnimation}>We make your</motion.h2>
           </StyledHide>
           <StyledHide>
             <motion.h2 variants={swipeUpAnimation}>
-              your <span>dreams</span> come
+              <span>dreams</span> come true
             </motion.h2>
-          </StyledHide>
-          <StyledHide>
-            <motion.h2 variants={swipeUpAnimation}>true.</motion.h2>
           </StyledHide>
         </motion.div>
         <motion.p variants={fadeAnimation}>
@@ -35,6 +33,7 @@ const AboutSection = () => {
       <StyledImage>
         <img src={home1} alt="guy with a camera" />
       </StyledImage>
+      <Wave />
     </StyledLayout>
   );
 };
