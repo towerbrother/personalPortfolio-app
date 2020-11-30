@@ -4,7 +4,7 @@ import { MovieState } from "./../movieState";
 import Award from "../components/Award";
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { pageAnimation } from "./../animation";
+import { pageAnimation } from "./../animations";
 
 const ProjectsPage = () => {
   const history = useHistory();

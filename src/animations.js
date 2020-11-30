@@ -1,5 +1,3 @@
-import { waitFor } from "@testing-library/react";
-
 export const pageAnimation = {
   hidden: { opacity: 0, y: 300 },
   show: {
@@ -7,7 +5,7 @@ export const pageAnimation = {
     y: 0,
     transition: { duration: 1, when: "beforeChildren", staggerChildren: 0.25 },
   },
-  exit: { opacity: 0, y: 300, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
 export const swipeUpAnimation = {
@@ -28,6 +26,11 @@ export const photoAnimation = {
   show: {
     scale: 1,
     opacity: 1,
-    transition: { ease: "easeOut", duration: 0.75 },
+    transition: { ease: "easeOut", duration: 1 },
   },
+};
+
+export const lineAnimation = {
+  hidden: { width: "0%" },
+  show: { width: "100%", transition: { duration: 1 } },
 };

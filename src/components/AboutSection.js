@@ -1,10 +1,14 @@
 import React from "react";
 import Wave from "./Wave";
 import home1 from "../img/home1.png";
-import styled from "styled-components";
-import { StyledLayout, StyledDescription, StyledImage } from "./../styles";
+import {
+  StyledLayout,
+  StyledDescription,
+  StyledImage,
+  StyledHide,
+} from "./../styles";
 import { motion } from "framer-motion";
-import { fadeAnimation } from "../animation";
+import { fadeAnimation, photoAnimation } from "../animations";
 
 const AboutSection = () => {
   return (
@@ -27,7 +31,11 @@ const AboutSection = () => {
         <motion.button variants={fadeAnimation}>Contact Me</motion.button>
       </StyledDescription>
       <StyledImage>
-        <img src={home1} alt="guy with a camera" />
+        <motion.img
+          variants={photoAnimation}
+          src={home1}
+          alt="guy with a camera"
+        />
       </StyledImage>
       <Wave />
     </StyledLayout>
@@ -35,7 +43,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-export const StyledHide = styled.div`
-  overflow: hidden;
-`;
