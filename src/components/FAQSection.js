@@ -1,73 +1,53 @@
 import React from "react";
+import Toggle from "./Toggle";
 import styled from "styled-components";
 import { StyledLayout } from "./../styles";
+import { AnimateSharedLayout } from "framer-motion";
 
 const FAQSection = () => {
   return (
     <FAQ>
       <h2>
-        Any Questions<span>FAQ</span>
+        Any Questions <span style={{ display: "inline" }}>FAQ</span>
       </h2>
-      <div className="question">
-        <h4>How Do I Start?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus quidem aut consequatur adipisci dolore non voluptatum
-            repellat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae, labore!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
-      <div className="question">
-        <h4>Daily Schedule</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus quidem aut consequatur adipisci dolore non voluptatum
-            repellat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae, labore!
-          </p>
-        </div>
-      </div>
-      <div className="faq-line"></div>
-
-      <div className="question">
-        <h4>Different Payment Method</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus quidem aut consequatur adipisci dolore non voluptatum
-            repellat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae, labore!
-          </p>
-        </div>
-      </div>
-      <div className="question">
-        <h4>What Products do you offer?</h4>
-        <div className="answer">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus quidem aut consequatur adipisci dolore non voluptatum
-            repellat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Recusandae, labore!
-          </p>
-        </div>
-        <div className="faq-line"></div>
-      </div>
+      <AnimateSharedLayout>
+        <Toggle title="How do I start?">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus quidem aut consequatur adipisci dolore non
+              voluptatum repellat.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Daily Schedule?">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus quidem aut consequatur adipisci dolore non
+              voluptatum repellat.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="Different Payment Method">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus quidem aut consequatur adipisci dolore non
+              voluptatum repellat.
+            </p>
+          </div>
+        </Toggle>
+        <Toggle title="What Products do you offer?">
+          <div className="answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus quidem aut consequatur adipisci dolore non
+              voluptatum repellat.
+            </p>
+          </div>
+        </Toggle>
+      </AnimateSharedLayout>
     </FAQ>
   );
 };
