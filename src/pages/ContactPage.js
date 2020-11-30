@@ -1,18 +1,71 @@
 import React from "react";
+import styled from "styled-components";
+import { StyledHide } from "../styles";
 import { motion } from "framer-motion";
 import { pageAnimation, swipeUpAnimation } from "./../animations";
 
 const ContactPage = () => {
   return (
-    <motion.div
+    <StyledContact
       variants={pageAnimation}
       initial="hidden"
       animate="show"
       exit="exit"
     >
-      <h1 style={{ color: "white" }}>Contact Page</h1>
-    </motion.div>
+      <StyledTitle>
+        <StyledHide>
+          <motion.h2 variants={swipeUpAnimation}>Get in touch!</motion.h2>
+        </StyledHide>
+      </StyledTitle>
+      <div>
+        <StyledHide>
+          <StyledSocial variants={swipeUpAnimation}>
+            <StyledCircle />
+            <h2>LinkedIn</h2>
+          </StyledSocial>
+        </StyledHide>
+        <StyledHide>
+          <StyledSocial variants={swipeUpAnimation}>
+            <StyledCircle />
+            <h2>Github</h2>
+          </StyledSocial>
+        </StyledHide>
+        <StyledHide>
+          <StyledSocial variants={swipeUpAnimation}>
+            <StyledCircle />
+            <h2>Email</h2>
+          </StyledSocial>
+        </StyledHide>
+      </div>
+    </StyledContact>
   );
 };
 
 export default ContactPage;
+
+const StyledContact = styled(motion.div)`
+  padding: 5rem 10rem;
+  color: #353535;
+  min-height: 90vh;
+  background: #fff;
+`;
+
+const StyledTitle = styled.div`
+  margin-bottom: 4rem;
+  color: black;
+`;
+
+const StyledCircle = styled.div`
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: #353535;
+`;
+
+const StyledSocial = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  h2 {
+    margin: 2rem;
+  }
+`;
