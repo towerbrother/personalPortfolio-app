@@ -6,30 +6,31 @@ import {
   StyledImage,
   StyledHide,
 } from "./../styles";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { swipeUpAnimation, fadeAnimation } from "../animation";
 
 const AboutSection = () => {
   return (
     <StyledLayout>
       <StyledDescription>
-        <div className="title">
+        <motion.div className="title">
           <StyledHide>
-            <h2>We work to make</h2>
+            <motion.h2 variants={swipeUpAnimation}>We work to make</motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>
+            <motion.h2 variants={swipeUpAnimation}>
               your <span>dreams</span> come
-            </h2>
+            </motion.h2>
           </StyledHide>
           <StyledHide>
-            <h2>true.</h2>
+            <motion.h2 variants={swipeUpAnimation}>true.</motion.h2>
           </StyledHide>
-        </div>
-        <p>
+        </motion.div>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photography ideas you have. We have professionals
           with amazing skills.
-        </p>
-        <button>Contact Me</button>
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact Me</motion.button>
       </StyledDescription>
       <StyledImage>
         <img src={home1} alt="guy with a camera" />
