@@ -1,25 +1,21 @@
 import React from "react";
 import Wave from "./Wave";
 import home1 from "../img/home1.png";
-import {
-  StyledLayout,
-  StyledDescription,
-  StyledImage,
-  StyledHide,
-} from "./../styles";
+import styled from "styled-components";
+import { StyledLayout, StyledDescription, StyledImage } from "./../styles";
 import { motion } from "framer-motion";
-import { swipeUpAnimation, fadeAnimation } from "../animation";
+import { fadeAnimation } from "../animation";
 
 const AboutSection = () => {
   return (
     <StyledLayout>
       <StyledDescription>
-        <motion.div className="title">
+        <motion.div className="title" variants={fadeAnimation}>
           <StyledHide>
-            <motion.h2 variants={swipeUpAnimation}>We make your</motion.h2>
+            <motion.h2>We make your</motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2 variants={swipeUpAnimation}>
+            <motion.h2>
               <span>dreams</span> come true
             </motion.h2>
           </StyledHide>
@@ -39,3 +35,7 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
+
+export const StyledHide = styled.div`
+  overflow: hidden;
+`;
