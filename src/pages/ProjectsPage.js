@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { MovieState } from "./../movieState";
 import Award from "../components/Award";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./../animation";
 
 const ProjectsPage = () => {
   const history = useHistory();
@@ -18,7 +20,12 @@ const ProjectsPage = () => {
   return (
     <>
       {movie && (
-        <StyledDetails>
+        <StyledDetails
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <StyledHeadline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt={movie.title} />
@@ -46,7 +53,7 @@ const ProjectsPage = () => {
 
 export default ProjectsPage;
 
-const StyledDetails = styled.div`
+const StyledDetails = styled(motion.div)`
   color: white;
   padding: 0rem 10rem;
 `;

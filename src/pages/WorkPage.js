@@ -4,13 +4,21 @@ import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { pageAnimation } from "./../animation";
 
 // create a separate file with an array of projects
 // map through the array and display the Project component
 
 const WorkPage = () => {
   return (
-    <StyledWork>
+    <StyledWork
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      style={{ background: "white" }}
+    >
       <StyledProject>
         <h2>The Athlete</h2>
         <div className="line"></div>
@@ -38,13 +46,12 @@ const WorkPage = () => {
 
 export default WorkPage;
 
-const StyledWork = styled.div`
+const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0rem;
-    color: white;
   }
 `;
 
