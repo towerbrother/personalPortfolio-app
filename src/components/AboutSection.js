@@ -9,18 +9,18 @@ import {
   StyledHide,
 } from "./../styles";
 import { motion } from "framer-motion";
-import { fadeAnimation, photoAnimation } from "../animations";
+import { fadeAnimation, photoAnimation, swipeUpAnimation } from "../animations";
 
 const AboutSection = () => {
   return (
     <StyledAbout>
       <StyledDescription>
-        <motion.div className="title" variants={fadeAnimation}>
+        <motion.div className="title">
           <StyledHide>
-            <motion.h2>We make your</motion.h2>
+            <motion.h2 variants={swipeUpAnimation}>We make your</motion.h2>
           </StyledHide>
           <StyledHide>
-            <motion.h2>
+            <motion.h2 variants={swipeUpAnimation}>
               <span>dreams</span> come true
             </motion.h2>
           </StyledHide>
