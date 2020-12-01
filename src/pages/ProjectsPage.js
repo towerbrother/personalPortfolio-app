@@ -5,6 +5,7 @@ import Award from "../components/Award";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { pageAnimation } from "./../animations";
+import ScrollTop from "../components/ScrollTop";
 
 const ProjectsPage = () => {
   const history = useHistory();
@@ -45,6 +46,7 @@ const ProjectsPage = () => {
               alt={`${movie.title}-secondary`}
             ></img>
           </StyledSecondaryImage>
+          <ScrollTop />
         </StyledDetails>
       )}
     </>

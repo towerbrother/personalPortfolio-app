@@ -35,6 +35,8 @@ const StyledNav = styled.nav`
   align-items: center;
   padding: 1rem 10rem;
   background: #282828;
+  // position: sticky; - does not work - why?
+  // top: 0;
   #logo {
     font-size: 1.5rem;
     font-family: "Lobster", cursive;

@@ -13,6 +13,7 @@ import {
   lineAnimation,
 } from "../animations";
 import { useScroll } from "./../components/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 // create a separate file with an array of projects
 // map through the array and display the Project component
@@ -65,6 +66,7 @@ const WorkPage = () => {
           </StyledHide>
         </Link>
       </StyledProject>
+      <ScrollTop />
     </StyledWork>
   );
 };

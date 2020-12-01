@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { StyledHide } from "../styles";
 import { motion } from "framer-motion";
 import { pageAnimation, swipeUpAnimation } from "./../animations";
+import ScrollTop from "../components/ScrollTop";
 
 const ContactPage = () => {
   return (
@@ -37,6 +38,7 @@ const ContactPage = () => {
           </StyledSocial>
         </StyledHide>
       </div>
+      <ScrollTop />
     </StyledContact>
   );
 };
